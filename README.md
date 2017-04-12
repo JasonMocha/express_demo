@@ -3,9 +3,9 @@
 # 使用步骤
 
 * 1 安装nodejs http://nodejs.org 下载安装软件并安装。
-* 1.安装mysql数据库、创建schema，名称为mealsystem。导入文件中的mealsystem.sql文件
-* 2.git clone  https://github.com/JasonMocha/express_demo.git
-* 3.cd express_demo  进入项目目录
-* 4.npm install 安装所需要的JS依赖库
-* 5.npm start
-* 6.打开浏览器，输入 http://localhost:3000/
+* 2.安装mysql数据库、创建schema，名称为mealsystem。导入文件中的mealsystem.sql文件
+* 3.git clone  https://github.com/JasonMocha/express_demo.git
+* 4.cd express_demo  进入项目目录
+* 5.npm install 安装所需要的JS依赖库
+* 6.npm start
+* 7.打开浏览器，输入 http://localhost:3000/
