@@ -7,3 +7,4 @@
 * 3.cd express_demo  进入项目目录
 * 4.npm install 安装所需要的JS依赖库
 * 5.npm start
+* 6.打开浏览器，输入 http://localhost:3000/
