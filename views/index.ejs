@@ -1,0 +1,43 @@
+<% include header.ejs%>
+  <div class="container-fluid">
+    <% include nav.ejs%>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="list-group">
+            <h4 class="list-group-item active">热点菜品</h4>
+            <%foods.hotfoods.forEach(function(food,idx){%>
+              <div class="list-group-item center-block">
+                <img class="img-rounded" alt="Bootstrap Image Preview" src="<%=food.picture%>" />
+                <a href="#"><%=food.foodName %></a>&nbsp;&nbsp;
+                <span><%=food.price %>元</span>
+              </div>
+            <%})%>
+          </div>
+        </div>
+          <div class="col-md-4">
+          <div class="list-group">
+            <h4 class="list-group-item active">热点菜品</h4>
+            <%foods.salefoods.forEach(function(food,idx){%>
+              <div class="list-group-item center-block">
+                <img class="img-rounded" alt="Bootstrap Image Preview" src="<%=food.picture%>" />
+                <a href="#"><%=food.foodName %></a>&nbsp;&nbsp;
+                <span><%=food.price %>元</span>
+              </div>
+            <%})%>
+          </div>
+        </div>
+          <div class="col-md-4">
+          <div class="list-group">
+            <h4 class="list-group-item active">热点菜品</h4>
+            <%foods.recommedfoods.forEach(function(food,idx){%>
+              <div class="list-group-item center-block">
+                <img class="img-rounded" alt="Bootstrap Image Preview" src="<%=food.picture%>" />
+                <a href="#"><%=food.foodName %></a>&nbsp;&nbsp;
+                <span><%=food.price %>元</span>
+              </div>
+            <%})%>
+          </div>
+        </div>
+      </div>
+  </div>
+  <% include footer.ejs %>

@@ -1,0 +1,51 @@
+	<div class="row">
+    <div class="col-md-12">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="navbar-header">
+		    	<a class="navbar-brand" href="/"><span class="text-warning">网络点餐系统</span></a>
+	   		</div>	  
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <%if(session.user&&session.user.ident=='1'){
+					var fun=session.fun||'';
+					session.fun=undefined;
+					%>
+				<ul class="nav navbar-nav">
+					<li class="<%=fun&&fun=='users'?'active':''%>">
+					<a href="/users/">用户管理</a></li>
+					<li class="<%=fun&&fun=='cates'?'active':''%>">
+					<a href="/cates/">菜品分类管理</a></li>
+					<li class="<%=fun&&fun=='foods'?'active':''%>">
+					<a href="/foods/">菜品管理</a></li>
+					<li class="<%=fun&&fun=='carts'?'active':''%>">
+					<a href="/carts">查看用户点餐情况</a></li>
+				</ul>
+				 <%}
+				if(session.user){%>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">
+						 	<span class="glyphicon glyphicon-user"></span>
+					            <%=session.user.userName%>
+						 	<strong class="caret"></strong>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="/logout">退出登录</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+               <%}else{%>
+                 <ul class="nav navbar-nav navbar-right">
+						<li>
+							<a class="btn" role="button" href="#modal-login" data-toggle="modal">登录</a>
+						</li>
+						<li>
+							<a class="btn" role="button" href="#modal-register" data-toggle="modal">注册</a>
+						</li>
+					</ul>
+                <%}%>
+			</div>
+		</nav>
+	</div>
+	</div>

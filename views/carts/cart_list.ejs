@@ -1,0 +1,47 @@
+<% include ../header.ejs%>
+    <div class="container-fluid">
+        <% include ../nav.ejs%>
+            <%if(users){
+    %>
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8">
+                        <%users.forEach(function(val,idx){%>
+                            <div class="list-group">
+                                <div class="list-group-item active">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    <%=val.username%>
+                                </div>
+                                <%var sum=0;
+                                for(var i=0;i<val.carts.length;i++){
+                                    var food=val.carts[i];
+                                    sum=sum+food.price
+                                %>
+                                    <a class="list-group-item">
+                                        <%=food.foodName%>
+                                            <span class="badge">￥<%=food.price%></span>
+                                    </a>
+                                    <%}%>
+                                        <a class="list-group-item active">合计
+					<span class="badge">￥<%=sum%></span>
+				</a>
+                            </div>
+                            <%
+                            })%>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12" id="edit">
+                        </div>
+                    </div>
+                    <%
+    }
+    %>
+                </div>
+                <script>
+                    $(document).ready(function () {
+
+
+                    })
+                </script>
+                <% include ../footer.ejs %>
